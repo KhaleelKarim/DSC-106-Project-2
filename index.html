@@ -158,16 +158,34 @@
         <h3>FOR the Proposition</h3>
 
         <figure>
-          <img src="IMAGE_FILENAME" alt="">
-          <figcaption>BRIEF CAPTION HERE.</figcaption>
+          <img src="visualizations/stacked.png" alt="For the proposition" style="width: 1000px; height: 500px;">
+          <figcaption>Stacked Bar Chart Showing Mistreatment of Blacks by NYPD</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>
+            Probabilistic imputation to replace NaN values: -1 
+            <p>There were many missing values in the "complainant_ethnicity" column. Instead of 
+               dropping them or determining the missingness, I decided to fill them in with probabilistic
+               imputation, a method which preserves the patterns already seen in the data.
+            </p>
+          </li>
+          <li>Combining smaller ethnicities as well as those who refused to answer into one category: -1.5
+            <p>Normally, grouping together the ethnicities who made very tiny slivers in the bar chart
+              would not be a big deal. It only serves to remove the clutter and put the viewers attention
+              on what matters. Removing those who refused to report their ethnicity is misleading because 
+              we do not know what race they were. Viewers should be aware of this and mentally add some "plus
+              or minus space" to other categories.
+            </p>
+          </li>
+          <li>Use of stacked bar chart (comparing elements on unaligned scale): 1
+            <p>Comparing sizes on an unaligned scale is one of the better ways to encode infomation and I feel
+              that it was an appropriate choice here. The stacked bar chart allows us to see significant difference
+              of size across ethnicities.
+            </p>
+          </li>
         </ul>
       </section>
 
@@ -175,23 +193,59 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="IMAGE_FILENAME" alt="">
-          <figcaption>BRIEF CAPTION HERE.</figcaption>
+          <img src="visualizations/misleading moment.png" alt="against the proposition" style="width: 800px; height: 700px;">
+          <figcaption>Bar Charts Showing the Distribution of Complaints across Ethnicities</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>Multiple Groupings: 1
+            <p>Since I wanted to compare distributions for many different categories and show 
+              that they were all similar, multiple groupings was the most apt choice. It makes my
+              visualization more persuasive by making it more readiable and highlighting the similarity.
+            </p>
+          </li>
+          <li>Misleading Proportions: -2
+            <p>This visualization is misleading because the stat it represents has nothing to do with the claim, but the
+              title and subtitle make it seem like it does. These plots show the proportion of types of complaints <em>within</em> each
+              ethnicity. The fact that the distributions are so similar just means that the NYPD treats ethnicities similarly once
+              they stop them, but it doesn't reveal the fact that they stop certain ethnicities more. Furthermore, if I had used the actual
+              number of complaints instead of the proportion, the plots would look far more different. 
+            </p>
+          </li>
+          <li>Title and subtitle: -1
+            <p>As was mentioned in the previous bullet point, the title and subtitle make claims which are not necessarily true based on the
+              visualization. Specifically where the subtitle reads, "Each ethnicity submits a similar proportion of complaints..." is misleading.
+              It is very ambiguous to what this means and I am twisting it to say that all the ethnicities equally make up the number of complaints,
+              when in actuality the proportion of complaints within each ethnicity is similar.
+            </p>
+          </li>
         </ul>
       </section>
 
       <section>
         <h2>Final Reflection</h2>
 
-        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+        <p>
+          The most straightforward part was finding some visualization that supporting my first proposition. This is probably because
+          that claim is likely to be true. Likewise, it was harder to find data that supported the claim against the proposition. In the end,
+          I had to rely on a very deceptive technique, but that was the point of this project!
+        </p>
+          
+        <p>
+          If I had to come up with a definition for ethical visualization, it would go something like this. The most important thing is that
+          the author does not come in to the visualization process with a conclusion they want to reach in mind. If they are already familiar 
+          with the data in some way then it is fine, but it is critical for us to exhaustively examine our data to find ethical conclusions.
+          Then, I believe it is important that this conclusion is made clear, but not at the cost of supressing other, more irregular patterns
+          in the data. 
+        </p>
+           
+        <p>
+          This definition is quite vague, but at the end of the day a "good" misleading visualization will always be clever. It takes a careful
+          and trained eye to spot one. Some ways to effectively guard against misinformation from visualizations would be discussing them in 
+          a group setting and consulting an expert in the subject matter.
+        </p>
       </section>
     </main>
   
